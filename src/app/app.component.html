@@ -23,18 +23,19 @@
               </small>
             </div>
           </div>
-          <div>
-            <label for="email">email</label>
+          <mat-form-field>
+            <mat-label>email</mat-label>
             <input
+              matInput
               type="text"
               id="email"
               formControlName="email"
               class="form-control">
-            <small
+            <mat-error
               *ngIf="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched">
               Please enter a valid email
-            </small>
-          </div>
+            </mat-error>
+          </mat-form-field>
         </div>
         <div class="radio" *ngFor="let gender of genders">
           <label>
